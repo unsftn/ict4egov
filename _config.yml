@@ -1,0 +1,108 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: 
+  sr: IKT za državnu upravu
+  en: ICT for public administration
+email: ict4egov@uns.ac.rs
+description:
+  sr: Master studijski program IKT za državnu upravu namenjen je obrazovanju stručnjaka koji će biti kompetentni da projektuju, implementiraju i upravljaju složenim IKT rešenjima u državnoj upravi.
+  en: The master academic study programme ICT for public administration is intended to educate professionals that will be highly competent to design, implement and manage complex ICT solutions in public administration.
+index:
+  sr: index.md
+  en: index_en.md
+feed:
+  sr: /feed.xml
+  en: /feed_en.xml
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://ict4egov.uns.ac.rs" # the base hostname & protocol for your site
+twitter_username: ict4egov
+github_username:  unsftn
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+mainmenu:
+  sr:
+    home:
+      name: "Početna"
+      url: "/"
+    studije:
+      name: "Studije"
+      url: "/studije.html"
+    upis:
+      name: "Upis"
+      url: "/upis.html"
+    predmeti:
+      name: "Predmeti"
+      url: "/predmeti.html"
+    nastavnici:
+      name: "Nastavnici"
+      url: "/nastavnici.html"
+    praksa:
+      name: "Praksa"
+      url: "/praksa.html"
+    master:
+      name: "Master rad"
+      url: "/masterrad.html"
+    linkovi:
+      name: "Linkovi"
+      url: "/linkovi.html"
+    blog:
+      name: "Blog"
+      url: "/blog/"
+    kontakt:
+      name: "Kontakt"
+      url: "/kontakt.html"
+  en:
+    home:
+      name: "Home"
+      url: "/index_en.html"
+    studije:
+      name: "Studies"
+      url: "/studies.html"
+    upis:
+      name: "Enroll"
+      url: "/enroll.html"
+    predmeti:
+      name: "Courses"
+      url: "/courses.html"
+    nastavnici:
+      name: "Teachers"
+      url: "/teachers.html"
+    praksa:
+      name: "Internship"
+      url: "/internship.html"
+    master:
+      name: "Master Thesis"
+      url: "/masterthesis.html"
+    linkovi:
+      name: "Links"
+      url: "/links.html"
+    blog:
+      name: "Blog"
+      url: "/blog/"
+    kontakt:
+      name: "Contact"
+      url: "/contacts.html"
+
+sidebar:
+  sr:
+    pretraga: "Pretraga"
+    novosti: "Novosti"
+  en:
+    pretraga: "Search"
+    novosti: "News"

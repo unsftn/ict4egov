@@ -1,0 +1,206 @@
+{% assign postlangs=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% assign pagelangs=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% assign posts=site.posts | where:"lang", page.lang %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- Title here -->
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Study programme ICT for Public Administration">
+		<meta name="keywords" content="master studies, ict, public administration">
+		<meta name="author" content="University of Novi Sad">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  
+		<!-- Stylesheets -->
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Menu Drop Down Plug-in -->
+		<link href="css/ddlevelsmenu-base.css" rel="stylesheet">
+		<link href="css/ddlevelsmenu-topbar.css" rel="stylesheet">
+		<!-- Flex Slider CSS -->
+		<link href="css/flexslider.css" rel="stylesheet">
+		<!-- Pretty Photo CSS -->
+		<link href="css/prettyPhoto.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">		
+		<!-- Change the template color below. Supported colors blue,red and green. -->
+		<link href="css/blue.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon/favicon.png">
+
+        {% for post in postlangs %}
+        <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+        {% endfor %}
+        {% for page in pagelangs %}
+        <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+        {% endfor %}        
+	</head>
+
+	<body>
+
+
+		<!-- Header -->
+		
+		<!-- Fixed Bar -->
+		
+		<div class="fixedbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="logo">
+							<div class="pull-left">
+								<!-- Logo with font awesome icon. Replace it with your logo. Replace # with your site link -->
+								<h1><img src="img/uns.png" height="40"/> <a href="index.html">ict4egov</a></h1>
+							</div>
+							
+							<div class="navi">
+								<!-- Navigation Starts Here -->
+								<div class="pull-left">
+									<div id="ddtopmenubar" class="mattblackmenu">
+										<!-- Main navigation -->
+										<ul>
+                                            {% for menu in site.mainmenu[page.lang] %}
+                                            <li><a href="{{menu[1].url}}">{{menu[1].name}}</a></li>
+                                            {% endfor %}
+										</ul>
+									</div>
+								</div><!--/ Navigation Ends Here -->
+							</div>
+						</div>
+						<div class="share">
+							<div class="pull-right">
+								{% for post in postlangs %}
+								    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.lang }}</a>
+								{% endfor %}
+
+								{% for page in pagelangs %}
+								    <a href="{{ page.url | prepend: site.baseurl     }}">{{ page.lang }}</a>
+								{% endfor %}
+							</div>
+						</div>  
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Fixed Bar End -->
+		
+		<!-- Main content -->
+
+		<div class="main">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 hidden-lg">
+				  <div class="padd"><div class="navis"></div></div>
+			  </div>
+			  <div class="visible-lg">
+				  <div class="col-md-3 col-sm-3 sidey">
+					<!-- Sidebar Starts Here -->
+					<div class="padd sidebar">
+					  <!-- Each sidebar should be enclosed inside "widget class" -->
+					  <!-- 1st widget -->
+					  <div class="widget">
+						<!-- Sidebar heading enclosed inside h3. Don't forget to add the class "matopen". -->
+						<h3 class="matopen">{{site.sidebar[page.lang].pretraga}}</h3>
+						<!-- Sidebar content should be enclosed inside div with the class "matter". -->
+						<div class="matter">
+						  <!-- Search form -->
+						  <form class="form-inline">
+							<input type="text" class="form-control" placeholder="{{site.sidebar[page.lang].pretraga}}..."> 
+						  </form>
+						</div>
+					  </div>
+					  <!-- 3rd widget -->
+					  <div class="widget">
+						<h3 class="matopen">{{site.sidebar[page.lang].novosti}}</h3>
+						<div class="matter">
+						  <ul>
+						    {% for post in posts %}
+							<li><a href="{{post.url}}">{{post.title}}</a></li>
+							{% endfor %}
+						  </ul>
+						</div>
+					  </div>
+					</div>
+					<!-- Sidebar Ends Here -->
+				  </div>
+			  </div>
+			  <div class="col-md-9 col-sm-9">
+					<!-- Main Content Area -->
+					<div class="whity">
+						<!-- Main Content Starts Here -->
+						<!-- Content should be encloased inside div with the class "posts" -->
+						<div class="posts">
+							<!-- Each entry should be enclosed inside div with the class "entry" -->
+							<div class="entry">
+								<div class="padd">
+									<!-- Page title -->
+									<h2>{{page.title}}</h2>
+									<!-- Page Para -->
+									<p></p>
+									{{content}}
+								</div>
+							</div>
+						</div>
+					</div>
+			  </div>
+			  
+			  <div class="mobily hidden-lg">
+			  
+			  </div>
+			</div>
+		  </div>
+		</div> 
+
+		<!-- Footer -->
+		<footer>
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				<!-- Copyright information -->
+				<div class="fpadd">Copyright &copy; 2016 - <a href="http://www.uns.ac.rs/">Univerzitet u Novom Sadu</a></div>
+			  </div>
+			</div>
+		  <div class="clearfix"></div>
+		  </div>
+		</footer>		
+
+		
+		<!-- Scroll to top -->
+		<span class="totop"><a href="#"><i class="fa fa-angle-up"></i></a></span> 
+		
+		
+		<!-- JavaScript files -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Easing JS -->
+		<script src="js/easing.js"></script>
+		<!-- Drop Down Menu Plug-in JS -->
+		<script src="js/ddlevelsmenu.js"></script>
+		<!-- Flex Slider JS -->
+		<script src="js/flexslider.js"></script>
+		<!-- Pretty Photo, Isotope JS -->
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/isotope.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="js/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="js/custom.js"></script>
+		<!-- This Page Script -->
+		<script>
+		</script>
+
+	</body>
+</html>
