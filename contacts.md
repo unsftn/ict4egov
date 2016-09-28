@@ -5,17 +5,12 @@ lang: en
 ref: kontakt
 ---
 
-Contacts in English
-===================
+**Study programme head** <br/>
+Branko Milosavljević, professor <br/>
+Faculty of Technical Sciences <br/>
+Email: mbranko at uns.ac.rs <br/>
 
-Rukovodilac studijskog programa: prof. dr Vladan Devedžić
-Telefon: 011 3950-853
-Elektronska pošta: devedzic@fon.rs
-
-Sekretar studijskog programa / Administrativna i studentska pitanja: Bojana Marjanović
-Phone: 011 3207-464
-Elektronska pošta: bojana.marjanovic@rect.bg.ac.rs
-
-Sekretar Veća za studije pri Univerzitetu: Jasmina Krajinović-Jokić
-Telefon: 011 3207-466
-Elektronska pošta: jokicj@rect.bg.ac.rs
+**Administration and student services** <br/>
+Nataša Hrabovski <br/>
+University of Novi Sad, dr Zorana Đinđića 1, Novi Sad <br/>
+Email: natasa.hrabovski at uns.ac.rs
