@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: 
   sr: IKT za državnu upravu
-  en: ICT for public administration
+  en: ICT for Public Administration
 email: ict4egov@uns.ac.rs
 description:
   sr: Master studijski program IKT za državnu upravu namenjen je obrazovanju stručnjaka koji će biti kompetentni da projektuju, implementiraju i upravljaju složenim IKT rešenjima u državnoj upravi.
@@ -34,6 +34,8 @@ github_username:  unsftn
 # Build settings
 markdown: kramdown
 theme: minima
+
+permalink: /vesti/:title
 
 mainmenu:
   sr:
@@ -62,8 +64,8 @@ mainmenu:
       name: "Linkovi"
       url: "/linkovi.html"
     blog:
-      name: "Blog"
-      url: "/blog/"
+      name: "Vesti"
+      url: "/vesti/"
     kontakt:
       name: "Kontakt"
       url: "/kontakt.html"
@@ -93,8 +95,8 @@ mainmenu:
       name: "Links"
       url: "/links.html"
     blog:
-      name: "Blog"
-      url: "/blog/"
+      name: "News"
+      url: "/vesti/"
     kontakt:
       name: "Contact"
       url: "/contacts.html"
