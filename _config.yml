@@ -65,7 +65,7 @@ mainmenu:
       url: "/linkovi.html"
     blog:
       name: "Vesti"
-      url: "/vesti/"
+      url: "/vesti.html"
     kontakt:
       name: "Kontakt"
       url: "/kontakt.html"
@@ -96,7 +96,7 @@ mainmenu:
       url: "/links.html"
     blog:
       name: "News"
-      url: "/vesti/"
+      url: "/vesti.html"
     kontakt:
       name: "Contact"
       url: "/contacts.html"
