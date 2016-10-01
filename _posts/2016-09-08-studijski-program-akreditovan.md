@@ -5,4 +5,4 @@ date: 2016-09-08
 files: 
 ---
 
-Studijski program **IKT za državnu upravu** je akreditovan.
+Studijski program **IKT za državnu upravu** je uspešno akreditovan.

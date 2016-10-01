@@ -35,7 +35,7 @@ github_username:  unsftn
 markdown: kramdown
 theme: minima
 
-permalink: /vesti/:title
+permalink: /vesti/:year:month:day/:title
 
 mainmenu:
   sr:
